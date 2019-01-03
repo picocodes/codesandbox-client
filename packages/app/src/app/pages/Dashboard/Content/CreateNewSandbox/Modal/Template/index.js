@@ -4,7 +4,7 @@ import getIcon from 'common/lib/templates/icons';
 import { ENTER } from 'common/lib/utils/keycodes';
 import { Container, IconContainer, Title, SubTitle } from './elements';
 
-export default ({ template, subtitle, width, selectTemplate, small }) => {
+export default ({ template, subtitle, selectTemplate, small }) => {
   const Icon = getIcon(template.name);
 
   const select = () => selectTemplate(template);
@@ -15,7 +15,6 @@ export default ({ template, subtitle, width, selectTemplate, small }) => {
     <Container
       onClick={select}
       color={template.color}
-      width={width}
       onKeyDown={e => {
         if (e.keyCode === ENTER) {
           select();
